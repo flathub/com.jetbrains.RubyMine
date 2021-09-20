@@ -30,7 +30,7 @@ modules:
       - install -D -m644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
     sources:
       - type: extra-data
-        url: https://download-cdn.jetbrains.com/ruby/RubyMine-2021.2.2.tar.gz
+        url: https://download.jetbrains.com/ruby/RubyMine-2021.2.2.tar.gz
         filename: rubymine.tar.gz
         sha256: 979745e52bdef91ed2ea46f392ba4b838849fbc3ec2ce0607ca7087bdc5479d3
         size: 516758156
