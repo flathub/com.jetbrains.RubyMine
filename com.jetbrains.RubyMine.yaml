@@ -20,6 +20,8 @@ finish-args:
   - --env=RUBYMINE_JDK=${FLATPAK_DEST}/extra/rubymine/jre64
   - --allow=devel
 modules:
+  - shared-modules/libsecret/libsecret.json
+
   - name: RubyMine
     buildsystem: simple
     build-commands:
