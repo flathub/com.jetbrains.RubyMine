@@ -27,6 +27,7 @@ modules:
     buildsystem: simple
     build-commands:
       - unzip rubymine_logos.zip
+      - install rubymine.sh ${FLATPAK_DEST}/bin/rubymine-zypak.sh
       - install -D apply_extra /app/bin/apply_extra
       - install -D -m644 rubymine_logos/icon-rubymine.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -D -m644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop
@@ -55,11 +56,22 @@ modules:
         url: https://resources.jetbrains.com/storage/products/rubymine/docs/rubymine_logos.zip
         sha256: 5eb661386f1a0b667566b8408a831e6998761bc5c0f9d42c34935684417383e3
         size: 1106608
+      - type: script
+        dest-filename: rubymine.sh
+        commands:
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          - exec zypak-wrapper /app/extra/rubymine/bin/rubymine.sh "$@"
+
+  - name: zypak
+    sources:
+      - type: git
+        url: https://github.com/refi64/zypak
+        tag: v2022.04
 
   - name: wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/extra/rubymine/bin/rubymine.sh
+      - -Deditor_binary=/app/bin/rubymine-zypak.sh
       - -Dprogram_name=rubymine
       - -Deditor_title=RubyMine
     sources:
