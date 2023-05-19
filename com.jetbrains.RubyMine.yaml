@@ -34,10 +34,10 @@ modules:
       - install -D -m644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
     sources:
       - type: extra-data
-        url: https://download.jetbrains.com/ruby/RubyMine-2023.1.1.tar.gz
+        url: https://download.jetbrains.com/ruby/RubyMine-2023.1.2.tar.gz
         filename: rubymine.tar.gz
-        sha256: 44a852fa872751ba53b1a10eb5d136a407ae7db90e4e4f8c37ba282dcc9c1419
-        size: 628717636
+        sha256: f7f40e03571d485a7b6e36b98c8a3e3b534456fb351389347927a800e1b2fc74
+        size: 628819261
         x-checker-data:
           type: jetbrains
           code: RM
