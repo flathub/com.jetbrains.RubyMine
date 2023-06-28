@@ -31,6 +31,7 @@ modules:
       - install -D -m644 rubymine_logos/icon-rubymine.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -D -m644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop
       - install -D -m644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      - cat idea.properties | tee -a ${FLATPAK_DEST}/bin/idea.properties
     sources:
       - type: extra-data
         url: https://download.jetbrains.com/ruby/RubyMine-2023.1.3.tar.gz
@@ -55,6 +56,8 @@ modules:
         url: https://resources.jetbrains.com/storage/products/rubymine/docs/rubymine_logos.zip
         sha256: 5eb661386f1a0b667566b8408a831e6998761bc5c0f9d42c34935684417383e3
         size: 1106608
+      - type: file
+        path: idea.properties
 
   - name: wrapper
     buildsystem: meson
