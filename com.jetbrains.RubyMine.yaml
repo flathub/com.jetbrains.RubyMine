@@ -34,10 +34,10 @@ modules:
       - cat idea.properties | tee -a ${FLATPAK_DEST}/bin/idea.properties
     sources:
       - type: extra-data
-        url: https://download.jetbrains.com/ruby/RubyMine-2023.1.5.tar.gz
+        url: https://download.jetbrains.com/ruby/RubyMine-2023.2.tar.gz
         filename: rubymine.tar.gz
-        sha256: 32ec11992be5675a059df5528e04df7d1f8d96f1eebb9dd2d0141ae7f7be6d37
-        size: 628958968
+        sha256: 9da529bbc2c65503f1e01c85b745f676140c2263b9541fb1c5bae0d3b9329787
+        size: 629268122
         x-checker-data:
           type: jetbrains
           code: RM
