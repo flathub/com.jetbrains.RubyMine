@@ -38,6 +38,19 @@ modules:
         filename: rubymine.tar.gz
         sha256: 9da529bbc2c65503f1e01c85b745f676140c2263b9541fb1c5bae0d3b9329787
         size: 629268122
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: jetbrains
+          code: RM
+          is-main-source: true
+      - type: extra-data
+        url: https://download.jetbrains.com/ruby/RubyMine-2023.2-aarch64.tar.gz
+        filename: rubymine.tar.gz
+        sha256: 6b392a66d29198c6d4e6fa84bbb1e8744bab1a9d768d87424664d97fedca42e4
+        size: 630626902
+        only-arches:
+          - aarch64
         x-checker-data:
           type: jetbrains
           code: RM
