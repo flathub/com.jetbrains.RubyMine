@@ -34,10 +34,10 @@ modules:
       - cat idea.properties | tee -a ${FLATPAK_DEST}/bin/idea.properties
     sources:
       - type: extra-data
-        url: https://download.jetbrains.com/ruby/RubyMine-2023.3.6.tar.gz
+        url: https://download.jetbrains.com/ruby/RubyMine-2024.1.tar.gz
         filename: rubymine.tar.gz
-        sha256: d431626f1207d872e708e144056bebd001e25da198e785904b0cc08112daebe8
-        size: 667402704
+        sha256: 4fd9dcf83a1d1f6b7513c18383938bd65b2479fdb39c0421e2237a1e340c3912
+        size: 816203816
         only-arches:
           - x86_64
         x-checker-data:
@@ -45,10 +45,10 @@ modules:
           code: RM
           is-main-source: true
       - type: extra-data
-        url: https://download.jetbrains.com/ruby/RubyMine-2023.3.6-aarch64.tar.gz
+        url: https://download.jetbrains.com/ruby/RubyMine-2024.1-aarch64.tar.gz
         filename: rubymine.tar.gz
-        sha256: 038023de9fe12771043998cada293db8d1f869374cc48d276ac19c440cb25233
-        size: 668371451
+        sha256: 690f90bd8a974585414e499aa2cb46d68dbc8145906e98d7f3b4ad1f3bf49040
+        size: 815690924
         only-arches:
           - aarch64
         x-checker-data:
