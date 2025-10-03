@@ -68,7 +68,6 @@ modules:
       - type: file
         url: https://resources.jetbrains.com/storage/products/rubymine/docs/rubymine_logos.zip
         sha256: 5eb661386f1a0b667566b8408a831e6998761bc5c0f9d42c34935684417383e3
-        size: 1106608
       - type: file
         path: idea.properties
 
